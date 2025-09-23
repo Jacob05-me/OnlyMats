@@ -1,0 +1,108 @@
+html {
+    overflow-y: scroll;
+}
+
+.main-nav {
+    background-color: rgb(133, 67, 67);
+    overflow: hidden;
+    height: 150;
+    margin: 0;
+    /* position: fixed; */
+}
+
+.nav-left {
+    float: left;
+    text-align: center;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-size: 20px
+}
+
+.nav-right {
+    float: right;
+    padding: 20px 15px;
+}
+
+.main-nav a {
+    background-color: rgb(86, 156, 53);
+    color: rgb(255, 255, 255);  
+    text-align: center; 
+}
+
+.main-nav a:hover {
+    background-color: azure;
+    color: black;
+}
+
+/* a:link {
+    color:rgba(255, 217, 0, 0);
+}
+a:visited {
+    color:rgb(128, 110, 14);
+}
+a:hover {
+    color:gold;
+} */
+
+.logo-img {
+    height: 150px;
+    width: auto;
+}
+
+.PageTitle {
+    /* align-self: center; */
+    padding: 25px 25px;
+    font-size: 50px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Sidebar-left{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    /* z-index: 1; */
+    /* top: 0; */
+    left: 0;
+    background-color: rgb(71, 71, 71);
+    overflow-x: none;
+    padding-top: 20px;
+    margin-left: 0;
+}
+
+.Sidebar-left .SmexyImage {
+    width: 150px; 
+    height: auto;
+    align-self: left;
+}
+
+.Sidebar-left a{
+    padding: 20px;
+}
+
+.Main-Content {
+    margin-left: 200px;
+}
+
+.Sidebar-right{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    /* z-index: 1; */
+    /* top: 0; */
+    right: 0;
+    background-color: rgb(71, 71, 71);
+    overflow-x: none;
+    padding-top: 20px;
+    margin-right: 0;
+}
+
+.Sidebar-right .SmexyImage {
+    width: 150px; 
+    height: auto;
+    align-self: right;
+}
+
+.Sidebar-right a{
+    padding: 20px 20px 20px 20px;
+}

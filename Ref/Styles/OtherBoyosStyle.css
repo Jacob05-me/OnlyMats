@@ -1,0 +1,18 @@
+.BoyContainer {
+    margin-left: 50px;
+    top: 100px;
+}
+
+.singleContainer {
+    width: auto;
+    height: auto;
+}
+
+.imageLink {
+    color: aliceblue;
+}
+
+.PfPimage {
+    height: 150px;
+    width: 150px;
+}

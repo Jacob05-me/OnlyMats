@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>Only Mat's (18+)</title>
+<head>
+    <link rel="stylesheet" href="/Ref/Styles/style.css">
+</head>
+<div class="main-nav">
+    <div class="nav-left">
+        <div class="logo">
+            <a href="/Home/Home.html"  aria-label="Only Mats logo, goes back to homepage">
+                <img src="/Ref/IMG/logo.png" class="logo-img" alt="Matt's asshole with various text on it">
+            </a>
+            <div class="nav-link-container">
+                <a class="Nav-Link" href="/Pages/AssPics/AssPics.html" data-link-cat="AssPics">Ass Pics</a>
+                <a class="Nav-Link" href="/Pages/Store/Store.html" data-link-cat="Store">Store</a>
+                <a class="Nav-Link" href="/Pages/About/About.html" data-link-cat="About">About Me</a>
+                <a class="Nav-Link" href="/Pages/blog/Blog.html" data-link-cat="blog">Blog</a>
+                <a class="Nav-Link" href="/Pages/OtherBoys/OtherBoys.html" data-link-cat="OtherBoys">Other Boys</a>
+            </div>
+        </div>
+    </div>
+    <div class="nav-right">
+            <div class="SearchContainer">
+                <input class="inputField" id="itemSearch" placeholder="What ya lookin' for?" type="text">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    <h1 class="PageTitle" id="ColorText">Only Mat's Blog</h1>
+    <!-- Change .PageTitle, #ColorText color every 1 second-->
+    <script> 
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeTextColor() {
+            const textElement = document.getElementById('ColorText'); // Get the element by its ID
+            if (textElement) { // Check if the element exists
+                textElement.style.color = getRandomColor();
+            }
+        }
+
+        // Call the function initially and then repeatedly every 2 seconds (2000 milliseconds)
+        changeTextColor(); // Initial color change
+        setInterval(changeTextColor, 1000); // Change color every 2 seconds
+    </script>
+</div>
+
+<div class="Body">
+    <div>
+        
+    </div>
+</div>
+
+</html>
