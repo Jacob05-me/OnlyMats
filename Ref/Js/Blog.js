@@ -3,6 +3,8 @@
 function WriteComment(none){
     const targetElement = document.getElementById("comments-list");
     const formResults = document.getElementById("comment-form");
+    var obj = {table : []};
+    obj.table.push();
     const Display = '';
     targetElement.insertAdjacentHTML("afterbegin", Display)
 }

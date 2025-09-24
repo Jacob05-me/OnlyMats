@@ -2,10 +2,53 @@
     background-color: rgb(185, 162, 133);
     float: center;
     padding: 5px;
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 #CommentInfoContainer {
+    align-self: top;
+}
+
+#CommentName {
+    float: left;
+    background-color: rgba(255, 255, 255, 0.445);
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#CommentTime {
+    float: right;
+}
+
+#CommentContentContainer {
+    background-color: rgb(255, 255, 255);
+    min-height: 75px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#CommentContents {
+    vertical-align: center;
+    text-align: left;
+}
+
+#reply-container {
+    background-color: rgb(23, 28, 42);
+    padding: 10px;
+    height: fit-content;
+}
+
+#ReplyContainer {
+    background-color: rgb(185, 162, 133);
+    float: center;
+    padding: 5px;
+    width: 95%;
+    height: auto;
+}
+#ReplyInfoContainer {
     align-self: top;
 }
 
@@ -17,12 +60,13 @@
     float: right;
 }
 
-#CommentContentContainer {
-    background-color: beige;
+#ReplyContentContainer {
+    background-color: rgb(255, 255, 255);
     min-height: 75px;
     max-height: fit-content;
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
 #CommentContents {
@@ -30,6 +74,6 @@
     text-align: left;
 }
 
-#CommentReplyButton {
-
+h1 {
+    font-size: 40px;
 }
