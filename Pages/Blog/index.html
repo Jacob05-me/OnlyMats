@@ -3,6 +3,8 @@
 <title>Only Mat's (18+)</title>
 <head>
     <link rel="stylesheet" href="/OnlyMats/Ref/Styles/style.css">
+    <link rel="stylesheet" href="/OnlyMats/Ref/Styles/BlogStyle.css"
+    <link rel="script" href="/OnlyMats/Ref/Js/Blog.js">
 </head>
 <div class="main-nav">
     <div class="nav-left">
@@ -51,6 +53,7 @@
 </div>
 
 <div class="Body">
+    
     <div>
         <div id="comment-section">
             <h3>Comments</h3>
@@ -62,8 +65,39 @@
                 <input type="text" id="comment-author" name="author" required>
                 <label for="comment-text">Comment:</label>
                 <textarea id="comment-text" name="comment" rows="4" required></textarea>
-                <button type="submit">Submit Comment</button>
+                <button onclick="WriteComment()" type="submit">Submit Comment</button>
             </form>
+            <br>
+            <hr>
+        </div>
+        <div id="MainCommentContainer">
+            <div id="commentContainer">
+                <div id="CommentInfoContainer">
+                    <div id="CommentName">Jacob</div>
+                    <div id="CommentTime">1/12/25 1:25pm</div>
+                </div>
+                <br>
+                <hr>
+                <div id="CommentContentContainer">
+                    <div id="CommentContents">This is a test comment</div>
+                </div>
+                <hr>
+                <div id="CommentReplyButtonContainer">
+                    <form id="reply-form">
+                        <div>Reply?</div>
+                        <label for="reply-author">Name:</label>
+                        <input type="text" id="reply-author" name="author" required>
+                        <label for="reply-text">Comment:</label>
+                        <textarea id="reply-text" name="comment" rows="1" required></textarea>
+                        <button onclick="Writereply()" type="submit">Reply</button>
+                    </form>
+                </div>
+                <hr>
+                <div>replys:</div>
+                <div id="reply-container">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>

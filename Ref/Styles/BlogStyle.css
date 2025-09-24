@@ -1,0 +1,35 @@
+#commentContainer {
+    background-color: rgb(185, 162, 133);
+    float: center;
+    padding: 5px;
+    width: 80%;
+    height: auto;
+}
+#CommentInfoContainer {
+    align-self: top;
+}
+
+#CommentName {
+    float: left;
+}
+
+#CommentTime {
+    float: right;
+}
+
+#CommentContentContainer {
+    background-color: beige;
+    min-height: 75px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#CommentContents {
+    vertical-align: center;
+    text-align: left;
+}
+
+#CommentReplyButton {
+
+}
