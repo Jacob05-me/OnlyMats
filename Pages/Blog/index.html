@@ -2,13 +2,13 @@
 <html>
 <title>Only Mat's (18+)</title>
 <head>
-    <link rel="stylesheet" href="/Ref/Styles/style.css">
-    <link rel="stylesheet" href="/Ref/Styles/BlogStyle.css">
-    <script src="/Ref/Js/Blog.js"></script>
+    <link rel="stylesheet" href="/OnlyMats/Ref/Styles/style.css">
+    <link rel="stylesheet" href="/OnlyMats/Ref/Styles/BlogStyle.css">
+    <script src="/OnlyMats/Ref/Js/Blog.js"></script>
     <script>
         onload = function loadPastComments() {
             console.log("loadPastComments running")
-            fetch('/Ref/json/Comments.json')
+            fetch('/OnlyMats/Ref/json/Comments.json')
                 .then(res => res.json())
                 .then(data => {
                     console.log("data:");
