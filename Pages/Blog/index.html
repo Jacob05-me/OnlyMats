@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="/Ref/Styles/style.css">
     <link rel="stylesheet" href="/Ref/Styles/BlogStyle.css">
-    <link rel="script" href="/Ref/Js/Blog.js">
+    <script src="/Ref/Js/Blog.js"></script>
     <script>
         onload = function loadPastComments() {
             console.log("loadPastComments running")
@@ -29,58 +29,11 @@
                         var Timecode = jsonComments.Comments[i].Timecode;
                         var Text = jsonComments.Comments[i].Text;
                         var ID = jsonComments.Comments[i].ID;
-                        let Display = '<div id="MainCommentContainer"><div id="commentContainer"><div id="CommentInfoContainer"><div id="CommentName">'+User+'</div><div id="CommentTime">'+Timecode+'</div></div><br><hr><div id="CommentContentContainer"><div id="CommentContents">'+Text+'</div></div><div id="CommentIDContainer"><div id="CommentID">ID : '+ID+'</div></div><hr><div id="CommentReplyButtonContainer"><form id="reply-form"><div>Reply?</div><label for="reply-author">Name:</label><input type="text" id="reply-author" name="author" required><label for="reply-text">Comment:</label><textarea id="reply-text" name="comment" rows="1" required></textarea><button onclick="Writereply()" type="submit">Reply</button></form></div><hr><div>replys:</div><div id="reply-container">'+replys+'</div></div></div><br>'
+                        let Display = '<div id="MainCommentContainer"><div id="commentContainer"><div id="CommentInfoContainer"><div id="CommentName">'+User+'</div><div id="CommentTime">'+Timecode+'</div></div><br><hr><div id="CommentContentContainer"><div id="CommentContents">'+Text+'</div></div><div id="CommentIDContainer"><div id="CommentID">ID : '+ID+'</div></div><hr><div id="CommentReplyButtonContainer"><form id="reply-form"><div>Reply?</div><label for="reply-author">Name:</label><input type="text" id="reply-author" name="author" required><label for="reply-text">Comment:</label><textarea id="reply-text" name="comment" rows="1" required></textarea><button type="submit">Reply</button></form></div><hr><div>replys:</div><div id="reply-container">'+replys+'</div></div></div><br>'
                         targetElement.insertAdjacentHTML("afterbegin", Display)
                     }
                     console.log("loadPastComments ran")
                 })
-            
-        }
-        function parseObject(){
-                var obj = {
-                    "Comments": [
-                        {
-                            "ID": 1,
-                            "User": "Jacob",
-                            "Timecode": "1/12/25 1:12pm",
-                            "Text": "This is a a test comment. [1]",
-                            "Replys": [
-                                {
-                                    "ID": 3,
-                                    "User": "Jacob",
-                                    "Timecode": "1/15/25 12:00pm",
-                                    "Text": "This is a a test comment. [1]"
-                                }
-                            ]
-                        },
-                        {
-                            "ID": 2,
-                            "User": "Jacob",
-                            "Timecode": "1/12/25 1:50pm",
-                            "Text": "This is a a test comment. [2]",
-                            "Replys": []
-                        }
-                    ]
-                }
-            for (var key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    var item = obj[key];
-                    if(typeof item == 'string'){
-                        console.log(key + ' -> ' + obj[key]);
-                    }
-                    else if(typeof item == 'object'){
-                        console.log(key + ' -> ' + obj[key]);
-                        var x = JSON.stringify(obj[key])
-                        var y = JSON.parse(x)
-                        console.log(key + ' -> ' + x);
-                        console.log(key + ' -> ' + y.ID);
-                    }
-                    else{
-                        console.log(key + ' -> ');
-                        parseObject(item);
-                    }
-                }
-            }
         }
     </script>
 </head>
@@ -130,7 +83,7 @@
     </script>
 </div>
 
-<div onload="loadPastComments()" class="Body">
+<div class="Body">
     
     <div>
         <div id="comment-section">
@@ -138,12 +91,12 @@
             <div id="comments-list">
                 <!-- Comments will be dynamically loaded here -->
             </div>
-            <form id="comment-form">
+            <form id="comment-form" onsubmit="WriteComment(event)">
                 <label for="comment-author">Name:</label>
                 <input type="text" id="comment-author" name="author" required>
                 <label for="comment-text">Comment:</label>
                 <textarea id="comment-text" name="comment" rows="4" required></textarea>
-                <button onclick="WriteComment()" type="submit">Submit Comment</button>
+                <button type="submit">Submit Comment</button>
             </form>
             <br>
             <hr>
@@ -170,7 +123,7 @@
                         <input type="text" id="reply-author" name="author" required>
                         <label for="reply-text">Comment:</label>
                         <textarea id="reply-text" name="comment" rows="1" required></textarea>
-                        <button onclick="Writereply()" type="submit">Reply</button>
+                        <button type="submit" >Reply</button>
                     </form>
                 </div>
                 <hr>
